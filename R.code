@@ -13,10 +13,9 @@ library(patchwork)
 library(scales)
 
 #read in datasets
-maps.acute <- read_excel("//cdc.gov/project/CCID_NCPDCID_NHSN_SAS/Data/work/_Projects/PAC team analysis project/Flu&COVID vaccination codes-Mary&Avni/2023MMWR/Maps/map_acute0915.xlsx")
-maps.ltc <- read_excel("//cdc.gov/project/CCID_NCPDCID_NHSN_SAS/Data/work/_Projects/PAC team analysis project/Flu&COVID vaccination codes-Mary&Avni/2023MMWR/Maps/map_ltc0915.xlsx")
-maps.all <- read_excel("//cdc.gov/project/CCID_NCPDCID_NHSN_SAS/Data/work/_Projects/PAC team analysis project/Flu&COVID vaccination codes-Mary&Avni/2023MMWR/Maps/mapall_0915.xlsx")
-
+maps.acute <- read_excel("XXXX")
+maps.ltc <- read_excel("XXXX")
+maps.all <- read_excel("XXXX")
 
 #Create Breaks 
 maps.all$bin1 <- cut(maps.all$percentflu, breaks = c(0, 0.45, 0.6, 0.75, 0.9, 1))
@@ -99,6 +98,6 @@ mapf
 maps_all <- mapc + mapd + mape + mapf + plot_layout(nrow = 2, byrow = TRUE)
 maps_all
 
-setwd("//cdc.gov/project/CCID_NCPDCID_NHSN_SAS/Data/work/_Projects/LTC/COVID-19/Codes/Jason/Mary_Projects/booster_maps")
+setwd("//XXXX")
 pdf_maps <- pdf(maps.all)
 view(pdf_maps)
